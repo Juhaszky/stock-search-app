@@ -27,15 +27,22 @@ const SearchLayout = async (props: {
                 <Search placeholder="Search..."></Search>
             </div>
             {query && (
-                <div className="max-w-md -mt-4 w-full md:w-1/2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50">
+                <div className="max-w-md -mt-4 w-full md:w-1/2 text-gray-900 border border-zinc-500 rounded-lg bg-zinc-600">
                     <ul>
                         {searchResults.length > 0 ? (
                             searchResults.map((result, index) => (
 
-                                <li key={index} className="p-2 border-b hover:bg-gray-200 hover:cursor-pointer rounded-lg">
+                                <li key={index} className="p-2 border-b border-zinc-600 bg-zinc-600 hover:bg-gray-700 hover:cursor-pointer rounded-lg">
                                     <Link href={`/detail/${result.symbol}`}>
-                                        {result.symbol} ({result.name})
-                                        <div>MatchScore: {result.matchScore}</div>
+                                        <p>
+                                            <span className="font-bold">Symbol:</span> {result.symbol}
+                                        </p>
+                                        <p>
+                                            <span className="font-bold">Name: </span>{result.name}
+                                        </p>
+                                        <p><span className="font-bold">MatchScore:</span> {result.matchScore}</p>
+
+                                        <div></div>
                                     </Link>
 
                                 </li>

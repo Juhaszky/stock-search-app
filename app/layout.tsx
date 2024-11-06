@@ -28,7 +28,7 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="flex h-screen bg-slate-600">
+        <main className="flex h-screen bg-slate-50 dark:bg-zinc-800">
           {children}
         </main>
       </body>
