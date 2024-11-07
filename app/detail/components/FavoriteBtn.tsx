@@ -1,20 +1,18 @@
 'use client'
 
-import { FavoriteButtonProps } from "@/app/models/StockSymbol";
+import { StockSymbolData } from "@/app/models/StockSymbol";
 import { useEffect, useState } from "react";
 
-const FavoriteButton: React.FC<FavoriteButtonProps> = ({ stockSymbol }) => {
+const FavoriteButton: React.FC<StockSymbolData> = ({ stockSymbol }) => {
     const [isFavorite, setIsFavorite] = useState(false);
 
     useEffect(() => {
-        const favorites: FavoriteButtonProps[] = JSON.parse(localStorage.getItem('favoriteStocks') || '[]');
-        console.log(favorites);
-        console.log(stockSymbol);
+        const favorites: StockSymbolData[] = JSON.parse(localStorage.getItem('favoriteStocks') || '[]');
         setIsFavorite(favorites.some((f) => f.stockSymbol === stockSymbol));
     }, [stockSymbol]);
 
     const handleAddFavorite = () => {
-        const favorites: FavoriteButtonProps[] = JSON.parse(localStorage.getItem('favoriteStocks') || '[]');
+        const favorites: StockSymbolData[] = JSON.parse(localStorage.getItem('favoriteStocks') || '[]');
         if (isFavorite) {
             const updatedFavorites = favorites.filter((f) => f.stockSymbol !== stockSymbol);
             localStorage.setItem('favoriteStocks', JSON.stringify(updatedFavorites));
