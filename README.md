@@ -21,9 +21,16 @@ A web application that allows users to search for stock quotes and view detailed
 1. **Search View**:
    - The user enters a stock **name** or **symbol** to search for.
    - The app makes an API call to fetch stock data based on the user input.
+   
+   ![image](https://github.com/user-attachments/assets/242e275e-b3a3-43a7-be1f-0c1eb0468c53)
+
+
 
 2. **Details View**:
    - After selecting a stock from the search results, the user can view detailed information about the stock. Stock informations like: the stock’s name, current price, values (open, high, low), volume, and a historical chart showing price trends.
+  
+   ![image](https://github.com/user-attachments/assets/20bfd786-d2a2-4571-822f-adc138521c00)
+
 
 ## API Integration
 
