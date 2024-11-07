@@ -29,7 +29,7 @@ export default async function RootLayout({
             </ul>
           </nav>
           <main className="flex-1 p-6 bg-slate-50 dark:bg-zinc-800 md:ml-64">
-            <div className="md:hidden mb-4">
+            <div className="flex flex-row justify-between md:hidden mb-4">
               <Link href="/" className="block text-purple-500 mb-2">Search Stocks</Link>
               <Link href="/favorites" className="block text-purple-500">Your Favorites</Link>
             </div>
