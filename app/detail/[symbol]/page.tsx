@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import ChartLayout from "../components/Chart";
+import FavoriteButton from "../components/FavoriteBtn";
 
 export const revalidate = 60;
 
@@ -18,7 +19,7 @@ const fetchStockData = async () => {
 };
 
 const StockDetail = async ({ params }: { params: { symbol: string } }) => {
-    const { symbol } = params;
+    const { symbol } = await params;
     const stockData = await fetchStockData();
 
     if (!stockData) {
@@ -70,6 +71,9 @@ const StockDetail = async ({ params }: { params: { symbol: string } }) => {
                 </div>
                 <div className="flex justify-center w-full mt-6">
                     <ChartLayout chartData={chartData} />
+                </div>
+                <div className="flex justify-center w-full">
+                    <FavoriteButton stockSymbol={symbol}></FavoriteButton>
                 </div>
             </div>
         </div>
