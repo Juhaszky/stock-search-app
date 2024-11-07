@@ -25,7 +25,7 @@ const SearchLayout = async (props: {
     }
     return (
         <div className="flex flex-col items-center gap-4 w-full h-full p-4">
-            <h1 className="font-bold text-3xl">Stock-Search-App</h1>
+            <h1 className="font-bold text-3xl text-purple-500">Stock-Search-App</h1>
             <div className="flex justify-center relative w-full md:w-1/2">
                 <Search placeholder="Enter symbol or name..."></Search>
             </div>
@@ -44,8 +44,6 @@ const SearchLayout = async (props: {
                                             <span className="font-bold">Name: </span>{result['2. name']}
                                         </p>
                                         <p><span className="font-bold">MatchScore:</span> {result['9. matchScore']}</p>
-
-                                        <div></div>
                                     </Link>
 
                                 </li>
