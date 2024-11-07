@@ -1,31 +1,36 @@
-import { notFound } from "next/navigation";
+
 import ChartLayout from "../components/Chart";
 import FavoriteButton from "../components/FavoriteBtn";
 import BackButton from "../components/BackBtn";
+import { Detail } from "@/app/models/DetailResponse";
+import ErrorLayout from "../components/ErrorLayout";
 
 export const revalidate = 60;
 
-const fetchStockData = async () => {
+const fetchStockData = async (): Promise<Detail | Error> => {
     try {
         const res = await fetch(`http://localhost:3000/api/detail`);
-        const data = await res.json();
+        const data: Detail = await res.json();
         if (!data['Monthly Time Series']) {
-            throw new Error("Stock data not available");
+            return new Error("Stock data not available: 'Monthly Time Series' missing");
         }
         return data;
     } catch (error) {
-        console.error("Error fetching stock data:", error);
-        return null;
+        if (error instanceof Error) {
+            return error;
+        } else {
+            return new Error("Unknown error fetching stock data");
+        }
     }
 };
 
 const StockDetail = async ({ params }: { params: { symbol: string } }) => {
     const { symbol } = await params;
     const stockData = await fetchStockData();
-
-
-    if (!stockData) {
-        notFound();
+    if (stockData instanceof Error) {
+        return (
+            <ErrorLayout error={stockData} symbol={symbol}></ErrorLayout>
+        );
     }
 
     const timeSeries = stockData['Monthly Time Series'];
