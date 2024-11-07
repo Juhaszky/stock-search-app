@@ -24,7 +24,7 @@ const fetchStockData = async (): Promise<Detail | Error> => {
     }
 };
 
-const StockDetail = async ({ params }: { params: { symbol: string } }) => {
+const StockDetail: React.FC<{ params: { symbol: string } }> = async ({ params }: { params: { symbol: string } }) => {
     const { symbol } = await params;
     const stockData = await fetchStockData();
     if (stockData instanceof Error) {

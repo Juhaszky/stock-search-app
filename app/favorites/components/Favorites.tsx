@@ -1,7 +1,7 @@
 import { StockSymbolData } from "@/app/models/StockSymbol";
 import Link from "next/link";
 
-const Favorites = ({ favorites }: { favorites: StockSymbolData[] }) => {
+const Favorites: React.FC<{ favorites: StockSymbolData[] }> = ({ favorites }: { favorites: StockSymbolData[] }) => {
     return (
         <div className="flex flex-col items-center gap-4 w-full h-full p-4">
             <h1 className="font-bold text-3xl text-purple-500">Your Favorite Stocks</h1>

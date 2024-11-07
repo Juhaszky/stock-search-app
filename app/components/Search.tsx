@@ -3,7 +3,7 @@
 import { debounce } from "chart.js/helpers";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-const Search = ({ placeholder }: { placeholder: string }) => {
+const Search: React.FC<{ placeholder: string }> = ({ placeholder }: { placeholder: string }) => {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const { replace } = useRouter();

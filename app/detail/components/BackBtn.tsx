@@ -1,5 +1,5 @@
 'use client'
-const BackButton = () => {
+const BackButton: React.FC = () => {
     return (
         <button
             className="self-start text-purple-500 hover:underline mb-4"

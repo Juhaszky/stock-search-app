@@ -1,5 +1,4 @@
 'use client'
-
 import { StockSymbolData } from "@/app/models/StockSymbol";
 import { useEffect, useState } from "react";
 

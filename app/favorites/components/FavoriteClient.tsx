@@ -3,7 +3,7 @@ import { StockSymbolData } from "@/app/models/StockSymbol";
 import { useEffect, useState } from "react";
 import Favorites from "./Favorites";
 
-const FavoritesClient = () => {
+const FavoritesClient: React.FC = () => {
     const [favorites, setFavorites] = useState<StockSymbolData[]>([]);
 
     useEffect(() => {

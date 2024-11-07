@@ -9,9 +9,9 @@ export interface MetaData {
     "4. Time Zone": string
 }
 export interface MonthData {
-    "1. open": string;
-    "2. high": string;
-    "3. low": string;
-    "4. close": string;
-    "5. volume": string;
+    "1. open": number;
+    "2. high": number;
+    "3. low": number;
+    "4. close": number;
+    "5. volume": number;
 }

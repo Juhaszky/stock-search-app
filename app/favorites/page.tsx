@@ -1,6 +1,6 @@
 import FavoritesClient from "./components/FavoriteClient";
 
-const FavoritesLayout = () => {
+const FavoritesLayout: React.FC = () => {
     
     return (
         <div className="page-container">
