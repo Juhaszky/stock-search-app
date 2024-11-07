@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import ChartLayout from "../components/Chart";
 import FavoriteButton from "../components/FavoriteBtn";
+import BackButton from "../components/BackBtn";
 
 export const revalidate = 60;
 
@@ -21,6 +22,7 @@ const fetchStockData = async () => {
 const StockDetail = async ({ params }: { params: { symbol: string } }) => {
     const { symbol } = await params;
     const stockData = await fetchStockData();
+
 
     if (!stockData) {
         notFound();
@@ -49,6 +51,7 @@ const StockDetail = async ({ params }: { params: { symbol: string } }) => {
 
     return (
         <div className="flex flex-col items-center w-full mx-auto p-6">
+            <BackButton></BackButton>
             <h1 className="text-center text-3xl font-bold">Stock Detail: {symbol}</h1>
             <div className="mt-6 w-full">
                 <div className="flex flex-wrap gap-6 justify-center">
