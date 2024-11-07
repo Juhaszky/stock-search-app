@@ -1,18 +1,11 @@
 'use client'
 import { Line } from "react-chartjs-2";
 import 'chart.js/auto';
+import { ChartData } from "@/app/models/ChartData";
+import React from "react";
 
-const ChartLayout = ({ chartData }: {
-    chartData: {
-        labels: string[];
-        datasets: {
-            label: string;
-            data: number[];
-            borderColor: string;
-            backgroundColor: string;
-            tension: number;
-        }[];
-    }
+const ChartLayout: React.FC<{ chartData: ChartData }> = ({ chartData }: {
+    chartData: ChartData
 }) => {
     const options = {
         responsive: true,
