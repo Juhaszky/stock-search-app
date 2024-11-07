@@ -1,12 +1,13 @@
 "use client";
 
+import { debounce } from "chart.js/helpers";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const Search = ({ placeholder }: { placeholder: string }) => {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const { replace } = useRouter();
-    const handleSearch = (searchInput: string) => {
+    const handleSearch = debounce((searchInput: string) => {
         const params = new URLSearchParams(searchParams);
         if (searchInput) {
             params.set('query', searchInput);
@@ -14,7 +15,7 @@ const Search = ({ placeholder }: { placeholder: string }) => {
             params.delete('query');
         }
         replace(`${pathname}?${params.toString()}`);
-    };
+    }, 500);
     return (
         <div className="max-w-md mx-auto w-full">
             <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
