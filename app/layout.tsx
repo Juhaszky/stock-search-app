@@ -1,18 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Link from "next/link";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Stock Search App",
@@ -26,10 +15,10 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`antialiased`}>
         <div className="flex flex-col md:flex-row h-screen">
           <nav className="w-full md:w-64 bg-zinc-700 text-white p-6 md:fixed top-0 left-0 md:h-full md:flex flex-col hidden md:block">
-            <h2 className="text-2xl font-bold mb-6">Stock Search App</h2>
+            <h2 className="text-2xl font-bold mb-6 text-purple-500">Stock Search App</h2>
             <ul>
               <li className="mb-4">
                 <Link href="/" className="hover:text-purple-500">Search Stocks</Link>
