@@ -1,103 +1,59 @@
 {
     "bestMatches": [
         {
-            "symbol": "SAIC",
-            "name": "Science Applications International Corp",
-            "type": "Equity",
-            "region": "United States",
-            "marketOpen": "09:30",
-            "marketClose": "16:00",
-            "timezone": "UTC-04",
-            "currency": "USD",
-            "matchScore": "1.0000"
+            "1. symbol": "TSCO.LON",
+            "2. name": "Tesco PLC",
+            "3. type": "Equity",
+            "4. region": "United Kingdom",
+            "5. marketOpen": "08:00",
+            "6. marketClose": "16:30",
+            "7. timezone": "UTC+01",
+            "8. currency": "GBX",
+            "9. matchScore": "0.7273"
         },
         {
-            "symbol": "SAICX",
-            "name": "JPMORGAN SMARTALLOCATION INCOME FUND CLASS C",
-            "type": "Mutual Fund",
-            "region": "United States",
-            "marketOpen": "09:30",
-            "marketClose": "16:00",
-            "timezone": "UTC-04",
-            "currency": "USD",
-            "matchScore": "0.8889"
+            "1. symbol": "TSCDF",
+            "2. name": "Tesco plc",
+            "3. type": "Equity",
+            "4. region": "United States",
+            "5. marketOpen": "09:30",
+            "6. marketClose": "16:00",
+            "7. timezone": "UTC-04",
+            "8. currency": "USD",
+            "9. matchScore": "0.7143"
         },
         {
-            "symbol": "SAICAPI.BSE",
-            "name": "SAI CAPITAL LTD.",
-            "type": "Equity",
-            "region": "India/Bombay",
-            "marketOpen": "09:15",
-            "marketClose": "15:30",
-            "timezone": "UTC+5.5",
-            "currency": "INR",
-            "matchScore": "0.5714"
+            "1. symbol": "TSCDY",
+            "2. name": "Tesco plc",
+            "3. type": "Equity",
+            "4. region": "United States",
+            "5. marketOpen": "09:30",
+            "6. marketClose": "16:00",
+            "7. timezone": "UTC-04",
+            "8. currency": "USD",
+            "9. matchScore": "0.7143"
         },
         {
-            "symbol": "600104.SHH",
-            "name": "SAIC Motor Corporation Ltd",
-            "type": "Equity",
-            "region": "Shanghai",
-            "marketOpen": "09:30",
-            "marketClose": "15:00",
-            "timezone": "UTC+08",
-            "currency": "CNY",
-            "matchScore": "0.2667"
+            "1. symbol": "TCO2.FRK",
+            "2. name": "TESCO PLC ADR/1 LS-05",
+            "3. type": "Equity",
+            "4. region": "Frankfurt",
+            "5. marketOpen": "08:00",
+            "6. marketClose": "20:00",
+            "7. timezone": "UTC+02",
+            "8. currency": "EUR",
+            "9. matchScore": "0.5455"
         },
         {
-            "symbol": "TSCO.LON",
-            "name": "Tesco PLC",
-            "type": "Equity",
-            "region": "United Kingdom",
-            "marketOpen": "08:00",
-            "marketClose": "16:30",
-            "timezone": "UTC+01",
-            "currency": "GBX",
-            "matchScore": "0.7273"
-        },
-        {
-            "symbol": "TSCDF",
-            "name": "Tesco plc",
-            "type": "Equity",
-            "region": "United States",
-            "marketOpen": "09:30",
-            "marketClose": "16:00",
-            "timezone": "UTC-04",
-            "currency": "USD",
-            "matchScore": "0.7143"
-        },
-        {
-            "symbol": "TSCDY",
-            "name": "Tesco plc",
-            "type": "Equity",
-            "region": "United States",
-            "marketOpen": "09:30",
-            "marketClose": "16:00",
-            "timezone": "UTC-04",
-            "currency": "USD",
-            "matchScore": "0.7143"
-        },
-        {
-            "symbol": "TCO2.FRK",
-            "name": "TESCO PLC ADR/1 LS-05",
-            "type": "Equity",
-            "region": "Frankfurt",
-            "marketOpen": "08:00",
-            "marketClose": "20:00",
-            "timezone": "UTC+02",
-            "currency": "EUR",
-            "matchScore": "0.5455"
-        },
-        {
-            "symbol": "TCO0.FRK",
-            "name": "TESCO PLC LS-0633333",
-            "type": "Equity",
-            "region": "Frankfurt",
-            "marketOpen": "08:00",
-            "marketClose": "20:00",
-            "timezone": "UTC+02",
-            "currency": "EUR",
-            "matchScore": "0.5455"
+            "1. symbol": "TCO0.FRK",
+            "2. name": "TESCO PLC LS-0633333",
+            "3. type": "Equity",
+            "4. region": "Frankfurt",
+            "5. marketOpen": "08:00",
+            "6. marketClose": "20:00",
+            "7. timezone": "UTC+02",
+            "8. currency": "EUR",
+            "9. matchScore": "0.5455"
         }
     ]
 }
