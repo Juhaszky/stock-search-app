@@ -13,7 +13,7 @@ const Favorites = () => {
     }, []);
     return (
         <div className="flex flex-col items-center gap-4 w-full h-full p-4">
-            <h1 className="font-bold text-3xl">Your Favorite Stocks</h1>
+            <h1 className="font-bold text-3xl text-purple-500">Your Favorite Stocks</h1>
             {favorites.length === 0 ? (
                 <p>You have no favorite stocks saved yet.</p>
             ) : (

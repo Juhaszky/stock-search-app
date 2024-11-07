@@ -52,7 +52,7 @@ const StockDetail = async ({ params }: { params: { symbol: string } }) => {
     return (
         <div className="flex flex-col items-center w-full mx-auto p-6">
             <BackButton></BackButton>
-            <h1 className="text-center text-3xl font-bold">Stock Detail: {symbol}</h1>
+            <h1 className="text-center text-3xl font-bold text-purple-500">Stock Detail: {symbol}</h1>
             <div className="mt-6 w-full">
                 <div className="flex flex-wrap gap-6 justify-center">
                     <div className="flex flex-col items-center bg-zinc-700 p-6 rounded-lg w-full sm:w-1/2 lg:w-1/3 shadow-md">
