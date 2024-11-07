@@ -1,3 +1,4 @@
+
 import ChartLayout from "../components/Chart";
 import FavoriteButton from "../components/FavoriteBtn";
 import BackButton from "../components/BackBtn";
@@ -6,9 +7,9 @@ import ErrorLayout from "../components/ErrorLayout";
 
 export const revalidate = 60;
 
-const fetchStockData = async (): Promise<Detail | Error> => {
+const fetchStockData = async (smybol: string): Promise<Detail | Error> => {
     try {
-        const res = await fetch(`http://localhost:3000/api/detail`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/detail?symbol=${smybol}`);
         const data: Detail = await res.json();
         if (!data['Monthly Time Series']) {
             return new Error("Stock data not available: 'Monthly Time Series' missing");
@@ -24,8 +25,8 @@ const fetchStockData = async (): Promise<Detail | Error> => {
 };
 
 const StockDetail = async ({ params }: { params: Promise<{symbol: string }> }) => {
-    const { symbol } = await params;
-    const stockData = await fetchStockData();
+    const {symbol} = await params;
+    const stockData = await fetchStockData(symbol);
     if (stockData instanceof Error) {
         return (
             <ErrorLayout error={stockData} symbol={symbol}></ErrorLayout>

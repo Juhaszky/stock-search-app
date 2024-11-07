@@ -15,7 +15,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
+      <body className={`antialiased dark`}>
         <div className="flex flex-col md:flex-row h-screen">
           <nav className="w-full md:w-64 bg-zinc-700 text-white p-6 md:fixed top-0 left-0 md:h-full md:flex flex-col hidden md:block">
             <h2 className="text-2xl font-bold mb-6 text-purple-500">Stock Search App</h2>

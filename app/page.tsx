@@ -20,10 +20,9 @@ const SearchLayout: React.FC<{
         let searchResults: Match[] = [];
         if (query) {
             try {
-                const fetchedData: SearchResponse = await fetch(`http://localhost:3000/api/search?query=${query}`)
+                const fetchedData: SearchResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/search?query=${query}`)
                     .then(res => res.json());
                 searchResults = fetchedData.bestMatches || [];
-                searchResults.sort((a, b) => b['9. matchScore'] - a['9. matchScore'])
             } catch (err) {
                 console.error("Error fetching search results:", err);
             }
