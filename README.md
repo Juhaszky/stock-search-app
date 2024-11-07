@@ -1,4 +1,5 @@
 # Stock Search App
+Deployed application with Vercel - **https://juhaszky-stock-search-app-dz3u.vercel.app/**
 
 A web application that allows users to search for stock quotes and view detailed data using the Alpha Vantage API.
 
@@ -58,7 +59,7 @@ To run the app locally, follow these steps:
 5. Open the app
 In your browser at http://localhost:3000.
 
-##Technologies used
+## Technologies used
 - [Next.js][2]
 - [Tailwind CSS][3]
 - [Alpha Vantage API][4]
